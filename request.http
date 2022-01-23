@@ -1,0 +1,44 @@
+GET http://localhost:9099/api/list
+
+
+###
+GET http://localhost:9099/api/list?id=1
+
+###
+GET http://localhost:9099/api/list/photo?id=2
+
+
+###
+POST http://localhost:9099/api/list HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Decorative"
+}
+
+###
+POST http://localhost:9099/api/list/photo HTTP/1.1
+content-type: application/json
+
+{
+    "id": 2,
+    "name" : "another new photo"
+}
+
+###
+PUT http://localhost:9099/api/list HTTP/1.1
+content-type: application/json
+
+{
+    "id" : 1,
+    "name" : "UI/UX Img"
+}
+
+###
+DELETE  http://localhost:9099/api/list HTTP/1.1
+content-type: application/json
+
+{
+    "id" : 1,
+    "name" : "UI/UX Img"
+}
